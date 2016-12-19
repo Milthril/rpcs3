@@ -59,6 +59,7 @@
 # Visual Studio Files
 .vs/*
 .vscode/*
+*.ipch
 *.vspx
 *.psess
 *.VC.*

@@ -20,11 +20,11 @@ If you want to contribute please take a look at the [Coding Style](https://githu
 ## Dependencies
 
 ### Windows
-* [Visual Studio 2015](https://www.visualstudio.com/vs/older-downloads/)
-* [Visual C++ Redistributable Packages for Visual Studio 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* [Visual Studio 2017](https://www.visualstudio.com/en/downloads/)
+* [Visual C++ Redistributable Packages for Visual Studio 2017](https://go.microsoft.com/fwlink/?LinkId=746572)
 * [Cmake 3.1.0+](https://www.cmake.org/download/) (required; add to PATH)
 * [Python 3.3+](https://www.python.org/downloads/) (required; add to PATH)
-* [Qt 5.10+](https://www.qt.io/download-open-source/) (required; add QTDIR environment variable if you do not want to use the Visual Studio Qt Plugin: e.g. `<QtInstallFolder>\5.10.1\msvc2015_64\`)
+* [Qt 5.10+](https://www.qt.io/download-open-source/) (required; add QTDIR environment variable if you do not want to use the Visual Studio Qt Plugin: e.g. `<QtInstallFolder>\5.10.1\msvc2017_64\`)
 * [Visual Studio Qt Plugin](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools2015) (optional; see above)
 * [Vulkan SDK](https://sdk.lunarg.com/sdk/download/1.1.73.0/windows/VulkanSDK-1.1.73.0-Installer.exe) (required)
 
@@ -49,7 +49,7 @@ To initialize the repository don't forget to execute `git submodule update --ini
 ### Configuring Qt
 
 *If you're using Visual Studio 2017 without Qt plugin support (or simply dont want to use it):* 
-1) Add `QTDIR` environment variable and set it to e.g `<QtInstallFolder>\5.10.1\msvc2015_64\` </br>
+1) Add `QTDIR` environment variable and set it to e.g `<QtInstallFolder>\5.10.1\msvc2017_64\` </br>
 
 
 *If you're using Visual Studio 2017, when you first open the project, do not upgrade the targets or the packages. Leave both at "No upgrade". Note that you will need the v140 toolset, which may not be in 2017 by default.* </br>
@@ -58,7 +58,7 @@ Open `rpcs3.sln`
 
 
 *If you wish to use the Visual Studio plugin for Qt:* </br>
-1) Go to the Qt5 menu and edit Qt5 options. Add the path to your Qt installation with compiler e.g. `C:\Qt\5.10.1\msvc2015_64`. </br>
+1) Go to the Qt5 menu and edit Qt5 options. Add the path to your Qt installation with compiler e.g. `C:\Qt\5.10.1\msvc2017_64`. </br>
 2) While selecting the rpcs3qt project, go to Qt5->Project Setting and select the version you added. 
 
 ### Building the projects
