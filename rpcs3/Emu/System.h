@@ -186,6 +186,8 @@ class Emulator final
 	std::string m_title;
 	std::string m_cat;
 	std::string m_dir;
+	std::string m_usr;
+	u32 m_usrid;
 
 	bool m_force_boot = false;
 
@@ -252,6 +254,18 @@ public:
 	const std::string& GetDir() const
 	{
 		return m_dir;
+	}
+
+	// String for GUI dialogs.
+	const std::string& GetUsr() const
+	{
+		return m_usr;
+	}
+
+	// u32 for cell.
+	const u32 GetUsrId() const
+	{
+		return m_usrid;
 	}
 
 	u64 GetPauseTime()
@@ -436,6 +450,15 @@ struct cfg_root : cfg::node
 		cfg::string ip_address{this, "IP address", "192.168.1.1"};
 
 	} net{this};
+
+	struct node_usr : cfg::node
+	{
+		node_usr(cfg::node* _this) : cfg::node(_this, "User") {}
+
+		// This is only a default, will get read from existing config.yml.
+		cfg::string selected_usr{ this, "Selected User", "00000001" }; 
+
+	} usr{this};
 
 	struct node_misc : cfg::node
 	{
